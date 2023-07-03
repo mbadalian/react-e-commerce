@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    font-family: Inter, sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    width: 299.5px;
+    margin: 10px;
+}
+
+.product-image-container {
+    position: relative;
+    background-color: #f5f6f6;
+    height: 299.5px;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    scale: 0.8;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.2);
+}
+
+.product-image-container:hover {
+    opacity: 1;
+}
+
+.product-like-wrapper {
+    position: absolute;
+    left: auto;
+    top: 16px;
+    right: 16px;
+    bottom: auto;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.product-like-wrapper:hover {
+    background-color: pink;
+}
+
+.product-like-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.product-info {
+    padding: 0px;
+}
+
+.product-title-price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.product-price-span {
+    position: relative;
+    top: -5px;
+    font-size: 13px;
+}
+
+.product-description {
+    font-size: 12px;
+    line-height: 16.5px;
+    margin-bottom: 10px;
+}
+
+.product-rating-wrapper {
+    display: flex;
+    justify-content: left;
+}
+
+.product-rating-total {
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 500;
+}
+
+.product-rating {
+    margin-bottom: 10px;
+}
+
+.product-star {
+    color: #08ac0a;
+    fill: #08ac0a;
+}
+
+.product-star-filled {
+    color: #08ac0a;
+}
