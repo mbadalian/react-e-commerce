@@ -21,6 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-src/.App.tsx
-src/ui/Card/index.css
-src/ui/Card/index.tsx
