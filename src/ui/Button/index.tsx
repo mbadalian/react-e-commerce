@@ -1,8 +1,10 @@
 import React from "react";
 
+import classnames from "classnames";
+
 import "./index.css";
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: "contained" | "outlined";
   size?: "medium" | "large";
   label: string;
@@ -16,7 +18,10 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   return (
-    <button className={`button ${variant} ${size}`} onClick={onClick}>
+    <button
+      className={classnames("button", { [variant]: true }, { [size]: true })}
+      onClick={onClick}
+    >
       {label}
     </button>
   );

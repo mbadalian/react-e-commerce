@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { LuHeart, LuStar } from "react-icons/lu";
-import Button from "../Button";
+
+import { Button } from "../../ui";
+
 import "./index.css";
 
-interface CardProps {
+export interface CardProps {
   imageSrc: string;
   title: string;
   price: number;
@@ -11,15 +13,27 @@ interface CardProps {
   rating: number;
 }
 
-const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps> = ({
   imageSrc,
   title,
   price,
   description,
   rating,
 }) => {
-  let wholePricePart = price.toString().split(".")[0];
-  let decimalPricePart = price.toString().split(".")[1];
+  const [isAdded, setIsAdded] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+  };
+
+  const handleAddClick = () => {
+    setIsAdded(!isAdded);
+  };
+
+  const priceSplitted = price.toString().split(".");
+  const wholePricePart = priceSplitted[0];
+  const decimalPricePart = priceSplitted[1];
   return (
     <div className="product-card">
       <div className="product-image-container">
@@ -29,8 +43,7 @@ const Card: React.FC<CardProps> = ({
         <div className="product-title-price-wrapper">
           <div className="product-title">{title}</div>
           <div className="product-price">
-            <span className="product-price-span">$</span>
-            {wholePricePart}
+            ${wholePricePart}
             <span className="product-price-span">
               .{decimalPricePart ? decimalPricePart : "00"}
             </span>
@@ -40,18 +53,24 @@ const Card: React.FC<CardProps> = ({
         <div className="product-rating-wrapper">
           <div className="product-rating">
             {[...Array(rating)].map((_, index) => (
-              <LuStar className="product-star" key={index} />
+              <LuStar className="product-star-icon" key={index} />
             ))}
+            (133)
           </div>
-          <div className="product-rating-total">(133)</div>
         </div>
-        <div className="product-like-wrapper">
-          <LuHeart size="20px" />
-        </div>
-        <Button label="Add to Cart" onClick={() => {}}></Button>
+        <button className="product-like-button" onClick={handleLikeClick}>
+          <LuHeart
+            className={`product-like-icon ${
+              isLiked ? "product-like-icon-filled" : ""
+            }`}
+            size="20px"
+          />
+        </button>
+        <Button
+          label={isAdded ? "Remove from Cart" : "Add to Cart"}
+          onClick={handleAddClick}
+        ></Button>
       </div>
     </div>
   );
 };
-
-export default Card;
