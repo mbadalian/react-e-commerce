@@ -1,7 +1,8 @@
 import React from "react";
+
+import { Button, Card } from "./ui/";
+
 import "./App.css";
-import Button from "./ui/Button";
-import Card from "./ui/Card";
 
 function App() {
   return (

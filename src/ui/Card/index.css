@@ -19,14 +19,14 @@ body {
     border-radius: 10px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
-    width: 299.5px;
+    width: 300px;
     margin: 10px;
 }
 
 .product-image-container {
     position: relative;
     background-color: #f5f6f6;
-    height: 299.5px;
+    height: 300px;
     overflow: hidden;
     align-items: center;
     display: flex;
@@ -49,7 +49,7 @@ body {
     opacity: 1;
 }
 
-.product-like-wrapper {
+.product-like-button {
     position: absolute;
     left: auto;
     top: 16px;
@@ -66,9 +66,10 @@ body {
     height: 40px;
     border-radius: 100px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.product-like-wrapper:hover {
+.product-like-button:hover {
     background-color: pink;
 }
 
@@ -77,8 +78,12 @@ body {
     width: 20px;
 }
 
+.product-like-icon-filled {
+    fill: #fcafad;
+}
+
 .product-info {
-    padding: 0px;
+    padding: 0;
 }
 
 .product-title-price-wrapper {
@@ -111,27 +116,20 @@ body {
     margin-bottom: 10px;
 }
 
-.product-rating-wrapper {
+.product-rating-button {
     display: flex;
     justify-content: left;
-}
-
-.product-rating-total {
-    margin-left: 5px;
-    font-size: 12px;
-    line-height: 100%;
-    font-weight: 500;
 }
 
 .product-rating {
     margin-bottom: 10px;
 }
 
-.product-star {
+.product-star-icon {
     color: #08ac0a;
     fill: #08ac0a;
 }
 
-.product-star-filled {
+.product-star-icon-filled {
     color: #08ac0a;
 }
