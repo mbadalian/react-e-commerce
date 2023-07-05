@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./index.css";
 
 interface ButtonProps {
@@ -8,7 +9,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   variant = "outlined",
   size = "medium",
   label,
@@ -20,5 +21,3 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-
-export default Button;
