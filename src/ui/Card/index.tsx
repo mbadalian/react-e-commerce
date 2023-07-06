@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LuHeart, LuStar } from "react-icons/lu";
 
-import { Button } from "../../ui";
+import { Button } from "../Button";
 
 import "./index.css";
 
@@ -67,9 +67,10 @@ export const Card: React.FC<CardProps> = ({
           />
         </button>
         <Button
+          variant={isAdded ? "contained" : "outlined"}
           label={isAdded ? "Remove from Cart" : "Add to Cart"}
           onClick={handleAddClick}
-        ></Button>
+        />
       </div>
     </div>
   );
