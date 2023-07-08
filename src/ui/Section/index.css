@@ -1,0 +1,10 @@
+.section-title {
+    color: #231f1e;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: Eina01, sans-serif;
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 700;
+}
