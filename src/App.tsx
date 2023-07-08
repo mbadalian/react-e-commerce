@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Card, Tabs, Tab } from "./ui/";
+import { Card } from "./components";
+import { Tabs, Tab } from "./ui";
 
 import "./App.css";
 

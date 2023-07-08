@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Card } from '.';
 
 const meta: Meta<typeof Card> = {
-  title: 'UI/Card',
+  title: 'Components/Card',
   component: Card,
   args: {
     image: "mock-2.png",

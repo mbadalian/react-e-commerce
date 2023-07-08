@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LuHeart, LuStar } from "react-icons/lu";
 
-import { Button } from "../Button";
+import { Button } from "../../ui";
 
 import "./index.css";
 

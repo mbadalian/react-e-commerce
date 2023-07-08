@@ -10,7 +10,7 @@ export const Section: React.FC<SectionProps> = ({ title, children }) => {
   return (
     <section>
       <h3 className="section-title">{title}</h3>
-      <div>{children}</div>
+      <div className="section-body">{children}</div>
     </section>
   );
 };
