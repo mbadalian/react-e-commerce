@@ -6,7 +6,7 @@ const meta: Meta<typeof Card> = {
   title: 'UI/Card',
   component: Card,
   args: {
-    imageSrc: "mock-2.png",
+    image: "mock-2.png",
     title: "Example Product",
     price: 19.99,
     description: "This is an example product description.",
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Card>;
 
 export const Main: Story = {
   args: {
-    imageSrc: "mock-2.png",
+    image: "mock-2.png",
     title: "Example Product",
     price: 19.99,
     description: "This is an example product description.",

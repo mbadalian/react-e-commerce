@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, Tabs } from "./ui/";
+import { Card, Tabs, Tab } from "./ui/";
 
 import "./App.css";
 
@@ -11,6 +11,7 @@ function App() {
     title: string;
     description: string;
     price: number;
+    rating: number;
   }
 
   const products: Product[] = [
@@ -20,6 +21,7 @@ function App() {
       title: "Product 1",
       description: "This is the description for Product 1.",
       price: 9.99,
+      rating: 4,
     },
     {
       id: 2,
@@ -27,6 +29,7 @@ function App() {
       title: "Product 2",
       description: "This is the description for Product 2.",
       price: 19.99,
+      rating: 4.5,
     },
     {
       id: 3,
@@ -34,6 +37,7 @@ function App() {
       title: "Product 3",
       description: "This is the description for Product 3.",
       price: 29.99,
+      rating: 3.1,
     },
   ];
 
@@ -54,35 +58,25 @@ function App() {
 
   return (
     <>
-      <Tabs
-        tabs={tabs.map((tab) => ({
-          title: tab.title,
-          content: (
-            <div className="wrapper">
-              {tab.products.map((product) => (
-                <Card
-                  key={product.id}
-                  imageSrc={product.image}
-                  title={product.title}
-                  description={product.description}
-                  price={product.price}
-                  rating={5}
-                />
-              ))}
-            </div>
-          ),
-        }))}
-      />
+      <Tabs>
+        {tabs.map(({ title, products }, index) => (
+          <Tab title={title} id={title + index}>
+            {products.map((props) => (
+              <Card key={props.id + title + index} {...props} />
+            ))}
+          </Tab>
+        ))}
+      </Tabs>
       <div className="wrapper">
         <Card
-          imageSrc="mock-2.png"
+          image="mock-2.png"
           title="Example Product"
           price={19.99}
           description="This is an example product description."
           rating={5}
         />
         <Card
-          imageSrc="mock.png"
+          image="mock.png"
           title="Example Product"
           price={30.0}
           description="This is an example product description."
