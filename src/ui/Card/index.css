@@ -116,12 +116,16 @@ body {
     margin-bottom: 10px;
 }
 
-.product-rating-button {
-    display: flex;
-    justify-content: left;
+.product-rating {
+    display: inline-flex;
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.product-rating {
+.product-rating-total {
+    font-size: 15px;
+    display: inline-flex;
+    margin-left: 5px;
     margin-bottom: 10px;
 }
 
@@ -130,6 +134,12 @@ body {
     fill: #08ac0a;
 }
 
-.product-star-icon-filled {
-    color: #08ac0a;
+.product-star-overlay {
+    background-color: black;
+    mix-blend-mode: color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }

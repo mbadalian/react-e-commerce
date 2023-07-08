@@ -6,7 +6,7 @@ import { Button } from "../Button";
 import "./index.css";
 
 export interface CardProps {
-  imageSrc: string;
+  image: string;
   title: string;
   price: number;
   description: string;
@@ -14,7 +14,7 @@ export interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({
-  imageSrc,
+  image,
   title,
   price,
   description,
@@ -37,7 +37,7 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div className="product-card">
       <div className="product-image-container">
-        <img src={imageSrc} alt={title} className="product-image" />
+        <img src={image} alt={title} className="product-image" />
       </div>
       <div className="product-info">
         <div className="product-title-price-wrapper">
@@ -52,11 +52,16 @@ export const Card: React.FC<CardProps> = ({
         <div className="product-description">{description}</div>
         <div className="product-rating-wrapper">
           <div className="product-rating">
-            {[...Array(rating)].map((_, index) => (
+            {[...Array(5)].map((_, index) => (
               <LuStar className="product-star-icon" key={index} />
             ))}
-            (133)
+            <div
+              className="product-star-overlay"
+              style={{ width: `${100 - Math.round((rating / 5) * 100)}%` }}
+            />
           </div>
+
+          <div className="product-rating-total">{rating}</div>
         </div>
         <button className="product-like-button" onClick={handleLikeClick}>
           <LuHeart
