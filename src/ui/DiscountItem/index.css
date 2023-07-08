@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    font-family: Inter, sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.discount-item {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    background-color: #f2e4d9;
+}
+
+.get-discount-content {
+    padding: 30px;
+}
+
+.discount-title {
+    max-width: 381px;
+    margin-top: 0px;
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Eina01, sans-serif;
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 700;
+}
+
+.discount-price {
+    font-family: Eina01, sans-serif;
+    color: #cb9917;
+    font-size: 52px;
+    line-height: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.discount-price-text-span {
+    position: relative;
+    top: -16px;
+    font-size: 31px;
+    line-height: 41px;
+}
+
+.discount-paragraph {
+    max-width: 385px;
+    margin-bottom: 0px;
+    color: #231f1e;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 500;
+}
+
+.discount-thumbnail-wrap {
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.discount-image {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
