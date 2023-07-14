@@ -1,0 +1,22 @@
+.section-title {
+    color: #231f1e;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: Eina01, sans-serif;
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 700;
+}
+
+.section-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-body > div:not(:last-of-type) {
+    margin-right: 8px;
+}
+.section-body > div {
+    margin-bottom: 8px;
+}
