@@ -1,0 +1,106 @@
+.header-wrapper {
+    background-color: #003d29;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1360px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.header-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-contacts-phone {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.header-item {
+    display: flex;
+    margin-right: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    line-height: 140%;
+}
+
+.header-navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.header-menu {
+    position: relative;
+    display: flex;
+}
+
+.header-toggle-dropdown {
+    cursor: pointer;
+    display: flex;
+    gap: 0 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.header-dropdown-menu {
+    position: absolute;
+    z-index: 11;
+    top: 100%;
+    left: 0;
+    display: block;
+    background-color: #fff;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-dropdown-menu-item {
+
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    display: block;
+    color: #222222;
+    position: relative;
+    text-decoration: none;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+.header-dropdown-menu-item:not(:last-child) {
+    border-style: none none solid;
+    border-width: 1px;
+    border-color: #000 #000 rgba(0, 0, 0, 0.24);
+}
